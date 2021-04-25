@@ -30,11 +30,11 @@
     K12,      K00, K01, K02, K03, K04, K05, K06, K07, K08, K09, \
     K13, K8E, K45, K19, K14,                     K10, K11,           K0C, K0E, K1E, K1F, K20,          K24, K25, K26, \
          K8F, K90, K2E, K28,                     K21, K22, K0F,      K33, K91, K92, K93, K94, K0B,     K36,      K37, \
-    K48,      K42, K43, K47, K4A, K2A, K46, K95, K49,      K16, K5A, K5B,           K17, K26, K1B,     K3E, K3F, K40, \
+    K48,      K42, K43, K47, K4A, K2A, K46, K95, K49,      K16, K5A, K5B,           K17, K2C, K1B,     K3E, K3F, K40, \
                                                                                                        K50, K51, K52, \
     K53, K54, K55, K56, K57, K58, K59,      K5C, K5D, K5E, K5F, K60, K61, K62,      K96, K3C, K3D,     K63, K64, K65, \
     K7C, K7D, K7E, K7F, K80, K81, K82,      K84, K85, K86, K87, K88, K89, K8A,      K3B, K97, K4D,     K79, K7A, K7B, \
-                                  K83,                                              K98, K4E, K4F,     K8B, K8C, \
+                                  K83,                                              K98, K4E, K4F,     K8B, K8C  \
 ) \
 { \
     { K00, K01,   K02,   K03, K04,   K05,   K06,   K07, K08,   K09,   KC_NO, K0B, K0C, K0D,   K0E,   K0F }, \
@@ -45,6 +45,6 @@
     { K50, K51, K52, K53, K54, K55, K56, K57, K58, K59, K5A, K5B, K5C, K5D, K5E, K5F }, \
     { K60, K61, K62, K63, K64, K65, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO }, \
     { KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, K79. K7A, K7B, K7C, K7D, K7E, K7F }, \
-    { K80, K81, K82, K83, K84, K85, K86, K87, K88, K89, K8A, K8B, K8C, KC_NO, K8E, K8F}, \
-    { K90, K91, K92, K93, K94, K95, K96, K97, K98, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO} \
+    { K80, K81, K82, K83, K84, K85, K86, K87, K88, K89, K8A, K8B, K8C, KC_NO, K8E, K8F }, \
+    { K90, K91, K92, K93, K94, K95, K96, K97, K98, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO } \
 }

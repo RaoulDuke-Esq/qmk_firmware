@@ -165,6 +165,23 @@
 /*===========================================================================*/
 
 /**
+Stuff that made an error cuz it was missing
+*/
+
+#if !defined(CH_CFG_USE_OBJ_CACHES)
+#define CH_CFG_USE_OBJ_CACHES               FALSE
+#endif
+
+#if !defined(CH_CFG_USE_DELEGATES)
+#define CH_CFG_USE_DELEGATES                FALSE
+#endif
+
+#if !defined(CH_CFG_USE_JOBS)
+#define CH_CFG_USE_JOBS                     FALSE
+#endif
+
+
+/**
  * @brief   Time Measurement APIs.
  * @details If enabled then the time measurement APIs are included in
  *          the kernel.
@@ -704,6 +721,8 @@
 }
 
 /** @} */
+
+
 
 /*===========================================================================*/
 /* Port-specific settings (override port settings defaulted in chcore.h).    */
