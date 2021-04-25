@@ -25,7 +25,7 @@ Ported to QMK by Techsock <info@techsock.com>
 #define PRODUCT_ID      0x0110
 #define DEVICE_VER      0x0101
 #define MANUFACTURER    Apple
-#define PRODUCT         M0110(A)
+#define PRODUCT         M0110
 
 /* matrix size */
 #define MATRIX_ROWS 14
