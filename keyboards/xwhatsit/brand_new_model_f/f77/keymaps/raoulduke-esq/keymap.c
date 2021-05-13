@@ -30,8 +30,10 @@
 #define DLFT LALT(KC_BSPC)
 #define DRTE LALT(KC_DEL)
 #define QUE LGUI(LSFT(KC_B))
-#define SLFT LGUI(KC_LEFT)
-#define SRTE LGUI(KC_RIGHT)
+#define SLFT LCTL(KC_LEFT)
+#define SRTE LCTL(KC_RIGHT)
+#define SPK HYPR(KC_S)
+#define COPY LGUI(KC_C)
 
 // Defines names for use in layer keycodes and the keymap
 enum layer_names {
