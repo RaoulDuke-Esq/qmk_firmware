@@ -15,6 +15,27 @@
  */
 #include QMK_KEYBOARD_H
 
+
+
+#define LOCK LGUI(LCTL(KC_Q))
+#define MMIC HYPR(KC_M)
+#define DICT HYPR(KC_D)
+#define PTRS LGUI(KC_BSPC)
+#define ETRS LGUI(LALT(LSFT(KC_BSPC)))
+#define INFO LGUI(LCTL(KC_I))
+#define DLS LGUI(LALT(KC_L))
+#define SCAP LGUI(LSFT(KC_4))
+#define SCRN LGUI(LSFT(KC_5))
+#define PSTE LGUI(LALT(LSFT(KC_V)))
+#define WLFT LALT(KC_LEFT)
+#define WRTE LALT(KC_RIGHT)
+#define DLFT LALT(KC_BSPC)
+#define DRTE LALT(KC_DEL)
+#define QUE LGUI(LSFT(KC_B))
+#define SLFT LGUI(KC_LEFT)
+#define SRTE LGUI(KC_RIGHT)
+
+
 // Defines names for use in layer keycodes and the keymap
 enum layer_names {
     _BASE,
