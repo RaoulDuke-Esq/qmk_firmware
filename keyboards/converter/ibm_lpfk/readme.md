@@ -15,16 +15,19 @@ The protocol is described in [IBM LPFK on a Serial Port](https://www.brutman.com
 
 ## Hardware
 
-The keyboard connects with a mini-DIN-8 cable.
 The protocol is 9600 baud serial at RS-232 levels, so a serial level shifter like the MAX232 is needed (there is one inside the keyboard itself).
 
-| DIN | Color  | Signal         |
-|-----|--------|----------------|
-| 1   | Brown  | Ground         |
-| 2   | Red    | Ground         |
-| 3   | Green  | TX (from kbd)  |
-| 4   | Yellow |                |
-| 5   | Orange | +5V            |
-| 6   | Gray   |                |
-| 7   | Violet |                |
-| 8   | Black  | RX (to kbd)    |
+The keyboard connects with a mini-DIN-8 cable. At least some of the cables that come with these mirror reverse the signals in each row of the connector.
+
+A cable such as that will have the staggered pin in the middle row (5) connected to the opposite pin in that same row (3). Check this and for a straight-through cable connect to match the PCB / keyboard DIN conector. And for one that is reversed, according to the Reversed column.
+
+| Color  | PCB | Reversed | Signal        |
+|--------|-----|----------|---------------|
+| Brown  | 1   | 2        | Ground        |
+| Red    | 2   | 1        | Ground        |
+| Orange | 3   | 5        | +5V           |
+| Yellow | 4   | 4        |               |
+| Green  | 5   | 3        | TX (from kbd) |
+| Blue   | 6   | 8        | RX (to kbd)   |
+| Violet | 7   | 7        |               |
+| Gray   | 8   | 6        |               |
