@@ -43,13 +43,38 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [0] = LAYOUT(
     TO(0), TO(1), TO(2), TO(3), \
-    KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6, \
-    KC_F7, KC_F8, KC_F9, KC_F10, KC_F11, KC_F12, \
-    KC_F13, KC_F14, KC_F15, KC_F16, KC_F17, KC_F18, \
+    INFO, DLS, SCAP, SCRN, PTRS, ETRS, \
+    QUE, COPY, PSTE, KC_F3, KC_F13, KC_F12, \
+    WLFT, WRTE, SLFT, SRTE, SLFT, DRTE, \
     KC_VOLD, KC_MUTE, KC_VOLU, KC_MPRV, KC_MPLY, KC_MNXT, \
-    DICT, SPK, RESET, MMIC \
-  )
+    DICT, SPK, LOCK, MMIC \
+  ),
+  [1] = LAYOUT(
+    TO(0), TO(1), TO(2), TO(3), \
+    KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, \
+    KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, \
+    KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, \
+    KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, \
+    KC_NO, KC_NO, KC_NO, KC_NO \
+  ),
+  [2] = LAYOUT(
+    TO(0), TO(1), TO(2), TO(3), \
+    KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, \
+    KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, \
+    KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, \
+    KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, \
+    KC_NO, KC_NO, KC_NO, KC_NO \
+  ),  
+  [3] = LAYOUT(
+    TO(0), TO(1), TO(2), TO(3), \
+    KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, \
+    KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, \
+    KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, \
+    KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, \
+    KC_NO, KC_NO, KC_NO, RESET \
+  ),
 } ;
+
 
 #ifdef LED_MATRIX_ENABLE
 
@@ -60,14 +85,16 @@ static uint8_t last_led_index = 0xFF;
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record)
 {
-    // No need for all of process_led_matrix, since just tracking this one.
+        // No need for all of process_led_matrix, since just tracking this one.
     if (record->event.pressed) {
         uint8_t led[1];
         if (led_matrix_map_row_column_to_led(record->event.key.row, record->event.key.col, led) > 0) {
             last_led_index = led[0];
         }
     }
+
     return true;
+
 }
 
 void led_matrix_indicators_kb(void) {
